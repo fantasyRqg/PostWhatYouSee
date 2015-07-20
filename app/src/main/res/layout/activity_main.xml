@@ -1,20 +1,35 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="15dp">
 
         <TextView
+            android:id="@+id/time_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:labelFor="@+id/content_editor"
             android:text="@string/hello_world" />
 
-    </RelativeLayout>
+        <EditText
+            android:id="@+id/content_editor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:gravity="start|top"
+            android:inputType="text" />
+
+    </LinearLayout>
 
 
     <android.support.v7.widget.RecyclerView
@@ -22,9 +37,6 @@
         android:layout_width="200dp"
         android:layout_height="match_parent"
         android:layout_gravity="end"
-        android:background="@android:color/white"
-        android:choiceMode="singleChoice"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
+        android:background="@color/white"
         android:drawSelectorOnTop="false" />
 </android.support.v4.widget.DrawerLayout>

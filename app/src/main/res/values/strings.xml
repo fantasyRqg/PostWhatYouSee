@@ -6,4 +6,6 @@
     <string name="font">font</string>
     <string name="photo">photo</string>
     <string name="back_ground">back ground</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
 </resources>
