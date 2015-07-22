@@ -6,30 +6,54 @@
     tools:context=".MainActivity">
 
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="vertical"
-        android:padding="15dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/time_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:labelFor="@+id/content_editor"
-            android:text="@string/hello_world" />
-
-        <EditText
-            android:id="@+id/content_editor"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="15dp"
-            android:background="@null"
-            android:gravity="start|top"
-            android:inputType="text" />
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="15dp">
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/content_editor"
+                    android:text="@string/hello_world"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:alpha="0.3"
+                    android:gravity="end"
+                    android:text="@string/post_what_you_see" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/content_editor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:background="@null"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+    </ScrollView>
 
 
     <android.support.v7.widget.RecyclerView

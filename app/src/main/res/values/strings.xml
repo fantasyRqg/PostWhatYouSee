@@ -8,4 +8,7 @@
     <string name="back_ground">back ground</string>
     <string name="drawer_open">open</string>
     <string name="drawer_close">close</string>
+    <string name="to_image">convert to image</string>
+    <string name="share">Share</string>
+    <string name="post_what_you_see">Post What You See</string>
 </resources>
