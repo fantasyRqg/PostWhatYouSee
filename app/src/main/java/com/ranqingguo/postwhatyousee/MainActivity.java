@@ -86,7 +86,7 @@ public class MainActivity extends Activity {
         mFontList.setAdapter(new FontAdapter(fonts));
         mFontList.setLayoutManager(new LinearLayoutManager(this));
         mFontList.setHasFixedSize(true);
-        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy,HH:mm", Locale.ENGLISH);
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy,HH:mm.", Locale.ENGLISH);
         timeText.setText(sdf.format(new Date()));
 
 
@@ -158,43 +158,6 @@ public class MainActivity extends Activity {
         mContentEditor.setCursorVisible(false);
         mScrollView.draw(canvas);
         mContentEditor.setCursorVisible(true);
-//        Rect rect = new Rect();
-//        int padding = DisplayUtils.dip2px(this, 10);
-//        rect.top = padding;
-//        rect.bottom = bitmap.getHeight() - padding;
-//        rect.left = padding;
-//        rect.right = bitmap.getWidth() - padding;
-//
-//        // center
-//        Paint mPaint = new Paint();
-//        mPaint.setColor(Color.BLACK);
-//        mPaint.setAntiAlias(true);
-//
-//        //background
-//        canvas.drawColor(Color.WHITE);
-//
-//        //draw date
-//        int x = timeText.getLeft() + timeText.getPaddingLeft();
-//        int y = timeText.getTop() + timeText.getPaddingTop() + timeText.getBaseline();
-//        System.out.println("date x:" + x + " y:" + y + " content:" + timeText.getText());
-//        mPaint.setTextSize(timeText.getTextSize());
-//        mPaint.setStyle(Paint.Style.STROKE);
-//
-//
-//        timeText.getHitRect(rect);
-//        System.out.println("date rect:" + rect.toShortString());
-//        canvas.drawRect(rect, mPaint);
-//        canvas.drawText(timeText.getText(), 0, timeText.getText().length(), x, y, mPaint);
-//        //draw content
-//        x = mContentEditor.getLeft() + mContentEditor.getPaddingLeft();
-//        y = mContentEditor.getTop() + mContentEditor.getPaddingTop() + mContentEditor.getBaseline();
-//        System.out.println("content x:" + x + " y:" + y + " content:" + mContentEditor.getText());
-//        mContentEditor.getHitRect(rect);
-//        canvas.drawRect(rect, mPaint);
-//        mPaint.setTextSize(mContentEditor.getTextSize());
-//        String content = mContentEditor.getText().toString();
-//        canvas.drawText(content, x, y, mPaint);
-
 
         return bitmap;
     }
